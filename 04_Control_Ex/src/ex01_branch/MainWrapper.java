@@ -123,7 +123,7 @@ public class MainWrapper {
     int month = 7;
     String season;  // "봄", "여름", "가을", "겨울"
     
-    if(month > 1 && month < 6) {
+    if(month > 2 && month < 6) {
       season = "봄";
     }else if(month > 5 && month < 9){
       season = "여름";
@@ -142,36 +142,99 @@ public class MainWrapper {
     //4 ~ 6 : 2분기
     //7 ~ 9 : 3분기
     //10 ~ 12 : 4분기
-    int m = 7;
+    int m = 12;
     int s = 0;
-    for(int n = 1; n <= m ; n++) {
-      for(int i = 0;i <= n / 3;i++)
+    for(int n = 1; n <= m ; n += 3) {
         s += 1;
-      }
     }
     System.out.println(m + "월은 " + s + "분기");
        
   }
   public static void ex07() {
   //10일 후 요일은?
-    int day = 13;  // 13일은 목요일
-    int nDay = 10;  // 10일
-    String weekname;  // "월", "화", "수", "목", "금", "토", "일" 
-    nDay % 7 == ;
+    int day = 1;    // 현재 일수
+    int nDay = 10;  // 지날 일수
+    int ncDay = 0;  // 지난 일수
+    ncDay = day + nDay;
     
-    
-    
-         
+    String weekname = "";   // 요일                 // "월", "화", "수", "목", "금", "토", "일" 
+    int month = 7;          // 현재 달수
+    int maxDay  = 0;        // 현재 달의 최대 일수
+    int year  = 2023;       // 현재 년도
+    switch(month) {
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12: 
+      maxDay = 31;
+      break;
+    case 4: case 6: case 9: case 11:
+      maxDay = 30;
+    break;
+    case 2:
+      if(year % 4 == 0 && year % 100 != 0) {
+        maxDay = 29;
+      }else if(year % 400 == 0){
+        maxDay = 29;
+      }else {
+        maxDay = 28;
+      }
+      break;
+      default:
     }
-
+    
+    
+    
+    
+    switch(ncDay % 7) {
+    case 0 :
+      weekname = "금";
+      break;
+    case 1 :
+      weekname = "토";
+      break;
+    case 2 :
+      weekname = "일";
+      break;
+    case 3 :
+      weekname = "월";
+      break;
+    case 4 :
+      weekname = "화";
+      break;
+    case 5 :
+      weekname = "수";
+      break;
+    case 6 :
+      weekname = "목";
+      break;
+      default:
+    }
+    System.out.println( nDay + "일후 요일은 " + month + "월 " + ncDay + "일 " + weekname + "요일");    
+    }
+    public static void ex08() {
+      // 아스키 코드
+      char ch = 'A';
+      if(ch >= 'A' && ch <= 'Z') {
+        ch += 32;
+      }else if(ch >= 'a' && ch <= 'z'){
+        ch -= 32;
+      }
+      
+      System.out.println(ch);
+      
+    
+    
+    }
+  
+  
+  
   public static void main(String[] args) {
 //    ex01();
 //    ex02();
 //    ex03();
 //    ex04();
 //    ex05();
-    ex06();
-//    ex07();
+//    ex06();
+    ex07();
+//    ex08();
     
   }
 
