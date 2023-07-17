@@ -21,16 +21,18 @@ public static void ex02() {
   // 3회 모금액 60원, 현재 모금액 180원
   // ...
   // 1667회 모금액 60원, 현재 모금액 100020원
-  int goal = 100000;  // 목표 모금액
+  final int GOAL = 100000;  // 목표 모금액
   int money = 60;  // 1회당 모금액
   int total = 0;  // 모금액 합계
   int nth = 0;  // 회차
   
-  for(nth = 1; total < goal; nth++) {
+  for(nth = 1; total < GOAL; nth++) {
     total += money;
     System.out.println(nth + "회 모금액 "+ money + "원, 현재 모금액 " + total + "원");
     
   }
+  
+  
   
   
   
@@ -41,6 +43,7 @@ public static void ex03() {
   // 2 x 1 = 2
   // ...
   // 9 x 9 = 81
+  // 고정 값 : 바깥 LOOP에 배치
   for(int dan = 1; dan <= 9; dan++) {
     System.out.println("--- " + dan + "단 ---");
     for(int n = 1; n <= 9; n++) {
@@ -66,12 +69,13 @@ public static void ex04() {
   int dan = 2;
   for(int dan2 = 1; dan2 <= 9; dan2++) {
     for(int n = dan; n <= 9; n++) {
-      System.out.print(n + "x" + dan2 + '=' + n * dan2 + " ");
+      System.out.print(n + "x" + dan2 + '=' + String.format("%-4d", n * dan2));
     }
     System.out.println();
   }
-  
-  
+//  String.format
+//  ("%nd", 숫자) %d는 정수, n이 양수이면 숫자 나중에 출력, 음수이면 먼저 출력
+//  정해진 칸수를 맞춘다.
 }
 
 public static void ex05() {
@@ -124,7 +128,7 @@ public static void ex07() {
   //   *****
   //  *******
   // *********
-  int num = 5;
+  int num = 20;
   for(int n = 1; n <= num; n++) {
     for(int s = 1; s <= num - n; s++) {
     System.out.print(" ");
@@ -156,6 +160,80 @@ public static void ex08() {
   
 }
 
+public static void ex09() {
+  // 삼각별 출력하기 - 3 (2중 loop)
+  //              *
+  //             ***
+  //            *****
+  //             ***
+  //            *****
+  //           *******
+  //          *********
+  //           ******* 
+  //          *********
+  //         ***********
+  //        *************
+  //       ***************
+  //
+  // 행 1  = 1 개
+  // 행 2  = 3 개
+  // 행 3  = 5 개
+  // 행 4  = 3 개
+  // 행 5  = 5 개
+  // 행 6  = 7 개
+  // 행 7  = 9 개
+  // 행 8  = 7 개
+  // 행 9  = 9 개
+  // 행 10 = 11개
+  // 행 11 = 13개
+  // 행 12 = 15개
+  int num = 5;
+  for(int n = 1; n <= num; n++) {
+    for(int s = 1; s <= num - n; s++) {
+    System.out.print(" ");
+    }
+    for(int l = 1; l <= 2 * n - 1; l++) {
+      System.out.print("*");
+    }
+    System.out.println();
+  }
+}
+
+public static void ex10() {
+  // 삼각별 출력하기 - 3 (2중 loop)
+  //   * 
+  // * * * *                  // 1일때 
+  //   *
+  //     *  
+  //   * * * * *
+  // * * * * * *              // 2일때 
+  //   * * * * *
+  //     *
+  //         
+  //       * 
+  //     * * * * * *  
+  //   * * * * * * *  
+  // * * * * * * * *         // 3일때
+  //   * * * * * * *  
+  //     * * * * * *  
+  //       * 
+  //         
+  int num = 5;
+  for(int n = 1; n <= num; n++) {
+    for(int s = 1; s <= num - n; s++) {
+    System.out.print(" ");
+    }
+    for(int l = 1; l <= 2 * n - 1; l++) {
+      System.out.print("*");
+    }
+    System.out.println();
+  }
+  
+  
+}
+
+
+
   public static void main(String[] args) {
 //  ex01();
 //  ex02();
@@ -165,7 +243,7 @@ public static void ex08() {
 //  ex06();
 //  ex07();
   ex08();
-  
+//  ex09();
 
   }
 
