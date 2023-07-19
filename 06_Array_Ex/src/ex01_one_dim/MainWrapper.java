@@ -9,7 +9,7 @@ public class MainWrapper {
     // 6 ~ 8 : 여름      6 ~ 8
     // 9 ~ 11: 가을      9 ~ 11
     // 12 ~ 2: 겨울      0 ~ 2
-    int month = 12;
+    int month = 1;
     String[] seasons = {"겨울", "봄", "여름", "가을"};
     // 코드 1줄로 해결할 것
     System.out.println(seasons[(month % 12) / 3]);
@@ -24,7 +24,7 @@ public class MainWrapper {
     for(int i = 0; i < a.length; i++) {
      a[i] = (i + 1) * 10;  
     }
-    System.out.println(Arrays.toString(a));
+    System.out.println("배열 a: " + Arrays.toString(a));
     
   }
   
@@ -34,10 +34,9 @@ public class MainWrapper {
     char[] a = new char[26];
     char ch = 'A';
     for(int i = 0; i < a.length; i++) {
-      a[i] = ch;
-      ch += 1;
+      a[i] = ch++;
     }
-    System.out.println(Arrays.toString(a));
+    System.out.println("배열 a: " + Arrays.toString(a));
   }
   
   public static void ex04() {
@@ -45,10 +44,12 @@ public class MainWrapper {
     // 배열 a: [10, 20, 30, 40, 50, 60]
     int[] a = {10, 20, 30, 0, 0, 0};
     int[] b = {40, 50, 60};
-    for(int i = 0; i < b.length; i++) {
-       b[i] = a[i + 3];
-    }
-    System.out.println(Arrays.toString(b));
+    
+    System.arraycopy(b, 0, a, 3, b.length);    // b배열 인덱스 0부터 를 a배열 인덱스 3부터 로 b.length 만크 복사해주는 함수.0
+//    for(int i = 0; i < b.length; i++) {
+//        a[i + 3] = b[i];
+//    }
+    System.out.println("배열 a: " + Arrays.toString(a));
   }
   
   public static void ex05() {
@@ -58,12 +59,16 @@ public class MainWrapper {
                                  // ┌------------------------------------------------┐
     int[] binary = new int[10];  // │ 0 │ 0 │ 0 │ 0 │ 1 │ 0 │ 0 │ 0 │ 1 │ 1 │
                                  // └------------------------------------------------┘
+    System.out.print("10진수 " + number + " = 2진수 "); 
     
     for(int i = 0; i < binary.length; i++) {
       binary[binary.length - 1 - i] = number % 2;
-      number = number / 2;
+      number /= 2;
     }
-    System.out.println(Arrays.toString(binary));
+    for(int b : binary) {
+      System.out.print(String.format("%d", b));
+    }
+   
   }
   
   public static void ex06() {
@@ -71,14 +76,33 @@ public class MainWrapper {
     // 평균: 84.8점
     // 최대: 100점
     // 최소: 70점
+    String[] name = {"윤아", "태연", "지민", "강호", "민지"};
+    int top = 0;
+    int bottom = 0;
     int[] score = {100, 70, 95, 83, 76};
     int total = score[0];  // 합계(평균을 구할 때 필요한 변수)
     int max = score[0];  // 최댓값
     int min = score[0];  // 최솟값
     
-    for(int i = 0; i < score.length; i++) {
+    for(int i = 1; i < score.length; i++) {
       total += score[i];
-    }
+      if(score[i] > max) {
+        max = score[i];
+        top = i;
+      }
+      if(score[i] < min) {
+        min = score[i];
+        bottom = i;
+      }
+      
+      }
+     
+    
+    System.out.println("평균: " + (double)total / score.length + "점");
+    System.out.println("최대: " + max + "점");
+    System.out.println("최소: " + min + "점");
+    System.out.println("1등 : " + name[top] + " " + max + "점");
+    System.out.println("꼴등: " + name[bottom] + " " + min + "점");
     
   }
   public static void main(String[] args) {

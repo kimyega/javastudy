@@ -13,6 +13,15 @@ public class MainWrapper {
     //  9  18  27  36  45  54  63  72  81
     int[][] gugudan = new int[8][9];
     
+    for(int i = 0; i < gugudan.length ; i++) {
+      for(int j = 0; j < gugudan[i].length; j++) {
+        gugudan[i][j] = (i + 2) * (j + 1);
+        System.out.print(String.format("%4d", gugudan[i][j]));
+      }
+      System.out.println();
+    }
+    
+    
   }
   
   public static void ex02() {
@@ -35,6 +44,15 @@ public class MainWrapper {
         {4, 4}   // 501호, 502호
     };
     
+    for(int i = 0; i < apt.length; i++) {
+      for(int j = 0; j < apt[i].length; j++) {
+        System.out.println((i + 1) + "0" + (j + 1) + "호: " + apt[i][j] + "명");
+      }
+    }
+    
+    
+    
+    
   }
   
   public static void ex03() {
@@ -51,6 +69,16 @@ public class MainWrapper {
         {3, 5},  // 4층
         {4, 4}   // 5층
     };
+
+    for(int i = 0; i < apt.length; i++) {
+      int total = 0;
+      for(int j = 0; j < apt[i].length; j++) {
+        total += apt[i][j];
+      }
+      System.out.println((i + 1) + "층: " + total + "명");
+    }
+    
+    
     
   }
   
@@ -69,6 +97,16 @@ public class MainWrapper {
         {"음악", "국어", "윤리"},
         {"수학", "영어", "체육", "과학"}
     };
+    
+    for(int i = 0; i < timeTable.length; i++) {
+      System.out.print(weekname[i] + ":");
+      for(int j = 0; j < timeTable[i].length; j++) {
+        System.out.print(String.format("%3s", timeTable[i][j])); // %d는 정수 %s 는 문자
+      }
+      System.out.println();
+    }
+    
+    
     
   }
 
@@ -94,9 +132,23 @@ public class MainWrapper {
     };
     int[][] b = new int[5][5];
     
+    for(int i = 0; i < a.length; i++) {
+      for(int j = 0; j < a[i].length; j++) {
+        b[j][(b.length - 1) - i] = a[i][j];
+      }
+    }
+    a = b;
+    
+    for(int[] c : a) {
+      for(int d : c) {
+        System.out.print(String.format("%4d", d));
+      }
+      System.out.println("\n");
+    }
+    
   }
   public static void main(String[] args) {
-    ex01();
+//  ex01();
 //  ex02();
 //  ex03();
 //  ex04();
