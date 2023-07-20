@@ -53,9 +53,15 @@ public class BankAccount {
     }
     return retVal;
   }
-  
-  public void transfer(String you, long money) {
-    balanceIn(money) = balanceOut(money);
+  /**
+   *  이체 메소드<br>
+   *  다른 계좌로 이체하는 메소드
+   *  내 계좌 출금 --> 상대 계좌 입금
+   * @param you 이체할 계좌명
+   * @param money 이체할 금액
+   */
+  public void transfer(BankAccount you, long money) {
+    you.balanceIn(balanceOut(money));
    }
   
   
@@ -66,10 +72,10 @@ public class BankAccount {
   public String getAccNo() {
     return accNo;
   }
-  public void setBalacne(int sb) {
-    balance = sb;
+  public void setBalacne(int balance) {
+    this.balance = balance;
   }
-  public void setAccNo(String sa) {
-    accNo = sa;
+  public void setAccNo(String accNo) {
+    this.accNo = accNo;
   }
 }
