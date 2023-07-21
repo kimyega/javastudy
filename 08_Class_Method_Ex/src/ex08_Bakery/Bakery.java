@@ -25,7 +25,6 @@ public class Bakery {
       return;
     }
     
-    
     count -= money / PRICE;
     this.money += money;
     this.money -= money % PRICE;
