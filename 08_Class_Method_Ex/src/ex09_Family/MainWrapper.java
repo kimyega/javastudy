@@ -54,8 +54,10 @@ public class MainWrapper {
     }
     
     for(Person p : family) {
+      if(p != null) {
       System.out.println("가족 이름: " + p.getName());
       System.out.println("가족 나이: " + p.getAge());
+      }
     }
     
   }
