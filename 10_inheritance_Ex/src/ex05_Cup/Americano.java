@@ -1,5 +1,9 @@
 package ex05_Cup;
 
-public class Americano {
-
+public class Americano extends Coffee{
+  
+  
+  public Americano() {
+    super();
+  }
 }

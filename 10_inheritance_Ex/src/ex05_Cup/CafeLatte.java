@@ -1,5 +1,7 @@
 package ex05_Cup;
 
-public class CafeLatte {
-
+public class CafeLatte extends Coffee{
+  public CafeLatte() {
+    super();
+  }
 }
