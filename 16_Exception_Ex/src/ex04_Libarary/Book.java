@@ -40,7 +40,7 @@ public class Book {
 
   @Override
   public String toString() {
-    return "Book [title=" + title + ", price=" + price + "]";
+    return "책이름: " + title + ", 가격: " + price + "원";
   }
 
   @Override
