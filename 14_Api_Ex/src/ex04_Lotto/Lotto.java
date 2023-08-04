@@ -39,32 +39,44 @@ public class Lotto {
     Random random = new Random();
     int[][] lotto = new int[5][6];
     int len = money / 1000;
+    
+    
     for(int i = 0; i < lotto.length; i++) {
       System.out.print("0" + (i + 1) + " :");
       
       for(int j = 0; j < lotto[i].length; j++) {
+        int a = -1;
         int lottoNo = random.nextInt(45) + 1;
-        
         lotto[i][j] = lottoNo;
+        
         for(int n = 0; n < j; n++) {
           if(lottoNo == lotto[i][n]) {
-            j--;
+            a = n;
+            break;
           }
         }
         
-        
-        System.out.print(String.format("%4d", lotto[i][j]));
+          if(a > 0 && lottoNo == lotto[i][a]) {
+            j--;  
+            continue;
+          }else {            
+            System.out.print(String.format("%4d", lotto[i][j]));    
+          }
         
       }
+      
       System.out.println();
+      
       if(i == 4 && i < len) {
-        len -= i + 1;
+        len -= (i + 1);
         i = -1;
         System.out.println("----------------------------------");
       }
+      
       if(i + 1 == len && len < 5) {
         break;
       }
+      
     }
     
   }
