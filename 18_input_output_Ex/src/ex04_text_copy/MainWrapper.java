@@ -24,13 +24,9 @@ public class MainWrapper {
     try {
       fout = new FileOutputStream(file);
       
-      String alp = "";
       for(int n = 'A'; n <= 'Z'; n++) {
-        alp += (char)n;
+        fout.write(n);
       }
-      byte[] b = alp.getBytes();
-      
-      fout.write(b);
       System.out.println("파일 생성 완료.");
     } catch(IOException e) {
       e.printStackTrace();

@@ -51,31 +51,33 @@ public class MainWrapper {
         // 2023-08-04 15:11:23    invalid operator ++
         // 2023-08-04 15:12:52    null
         
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd a h:mm:ss");
+        String strDate = sdf.format(date);
+        String message = strDate + "    " + e.getMessage() + " " + e.getClass().getName();
         File dir = new File("C:/storage");
         if(dir.exists() == false) {
           dir.mkdirs();
         }
         File file = new File(dir, "log.txt");
-        PrintWriter pw = null;
+        BufferedWriter bw = null;
         
         
-        Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String strDate = sdf.format(date);
-        String message = strDate + "    " + e.getMessage();
         
         try {
-          pw = new PrintWriter(new FileWriter(file));
-            
-            pw.println(message);
-            
+          bw = new BufferedWriter(new FileWriter(file, true));
+         
+          bw.write(message);
+          bw.newLine();
+          System.out.println(file.getPath() + " 파일에 예외처리 완료");
         }catch (IOException e1) {
           e1.printStackTrace();
         }finally {
-          if(pw != null) {
-            
-            pw.close();
-          }          
+          try {
+            if(bw != null) bw.close();                     
+          }catch(IOException e1) {
+            e1.printStackTrace();
+          }
         }
         
         
