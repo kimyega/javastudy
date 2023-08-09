@@ -21,8 +21,7 @@ public class Company {
     }
     System.out.println("사원명 입력 >>> ");
     String name = sc.next();
-    Employee emp = new Employee("0001", name);
-    employees.add();
+    
     
     System.out.println("기본급 입력 >>> ");
     int salary = sc.nextInt();
