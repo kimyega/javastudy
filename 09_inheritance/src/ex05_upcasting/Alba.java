@@ -20,6 +20,8 @@ public class Alba extends Student{
   public void working() {
     System.out.println("알바중!");
   }
+
+  @Override
   public void info() {
     super.info();
     System.out.println("일하는 곳: " + work);
