@@ -4,7 +4,6 @@ public class Customer {
 
   private int count;   // 빵 구매 개수
   private int money;      // 구매자의 현재금액
-  private Bakery bakery;
   
   
   public Customer(int money) {
