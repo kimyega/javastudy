@@ -8,6 +8,7 @@ public class MainWrapper {
 		 	여러 줄 주석
 		 	
 		 */
+
 		/*
 		 * 키워드 규칙
 		 * 1. 프로젝트 : 맘대로
@@ -24,7 +25,7 @@ public class MainWrapper {
 //		- 1 : 논리타입
 		boolean isGood  = true;		// 의미 전달 가능한 이름 사용
 		boolean isAlive = false;
-		System.out.println(isGood);		// sysout + 컨트롤   + 스페이스 syso까지 줄여서 가능
+		System.out.println(isGood);		// sout + 컨트롤   + 스페이스 syso까지 줄여서 가능
 		System.out.println(isAlive);	// 컨트롤 + 스페이스 = 자동완성기능 한두글자는 쓰는게 조회하기 편하다.
 		System.out.println(isGood);
 		System.out.println(isAlive);
