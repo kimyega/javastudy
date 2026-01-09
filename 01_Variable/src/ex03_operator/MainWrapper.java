@@ -36,7 +36,7 @@ public class MainWrapper {
 		
 		int i = 5;
 		int j = 2;
-		double result = (double)i / j;
+		double result = (double) i / j;
 		System.out.println("5 나누기 2 = " + result);
 		
 		
@@ -134,13 +134,7 @@ public class MainWrapper {
 		
 		String result = (score >= 60) ? "합격" : "불합격";
 		System.out.println("합격 여부 : " + result);
-		
-		
-		
-		
-		
-		
-		
+
 	}
 	// ex06 메소드 정의
 	public static void ex06() {
@@ -154,7 +148,7 @@ public class MainWrapper {
 		String str4 = 100 + "";	// 빈 문자열 ("")을 더해주면 된다.
 		String str5 = 1.5 + "";
 //		참고. 문자열로 변환하는 메소드가 있다.
-		String str6 = String.valueof(100);
+		String str6 = String.valueOf(100);
 		
 		System.out.println(str1);
 		System.out.println(str2);
