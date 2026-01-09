@@ -21,11 +21,11 @@ public class MainWrapper {
 	     * 2. 실수	  -> 정수
 	     */
 	    int bigNum = 256;
-	    byte smallNum = (byte)bigNum;
+	    byte smallNum = (byte) bigNum;
 	    System.out.println(smallNum);		// 정보 훼손 가능
 	    
-	    double pct = 0.5;
-	    int iPct = (int)pct;
+	    double pct = 1.5;
+	    int iPct = (int) pct;
 	    System.out.println(iPct);
 	    
 	    /*
@@ -33,6 +33,7 @@ public class MainWrapper {
 	     * 1. 문자열 -> 정수 (int, long)
 	     * 2. 문자열 -> 실수 (double)
 	     */
+
 	    String strScore = "100";
 	    int score = Integer.parseInt(strScore);
 	    
