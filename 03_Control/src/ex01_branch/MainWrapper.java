@@ -15,8 +15,7 @@ public class MainWrapper {
     if(score >= 60) {
       System.out.println("합격");
     }
-   if(score <= 60)    // 중괄호는 실행문이 1개일 경우 생략 가능.
-     System.out.println("불합격");
+   if(score <= 60) System.out.println("불합격");   // 중괄호는 실행문이 1개일 경우 생략 가능.
    
   }
   
@@ -33,13 +32,10 @@ public class MainWrapper {
   public static void ex02() {
     int score = 1000;
     
-    if(score < 0 || score > 100) {
-      System.out.println("잘못된 점수");
-    } else if(score >= 60){
-      System.out.println("합격");
-    } else if(score < 60){
-      System.out.println("불합격");
-    }
+    if (score < 0 || score > 100) System.out.println("잘못된 점수");
+    else if (score >= 60) System.out.println("합격");
+    else if (score < 60) System.out.println("불합격");
+
   }
   
 //  else 문
@@ -113,9 +109,12 @@ public class MainWrapper {
   }
   
 	public static void main(String[] args) {
-	
-	ex04();
-	
+    ex01();
+//    ex02();
+//    ex03();
+//    ex04();
+//    ex05();
+
 	
 
 	}
