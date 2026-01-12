@@ -161,6 +161,8 @@ public class MainWrapper {
     int month = 7;          // 현재 달수
     int maxDay  = 0;        // 현재 달의 최대 일수
     int year  = 2023;       // 현재 년도
+
+
     switch(month) {
     case 1: case 3: case 5: case 7: case 8: case 10: case 12: 
       maxDay = 31;
@@ -214,13 +216,11 @@ public class MainWrapper {
       char ch = 'A';
       if(ch >= 'A' && ch <= 'Z') {
         ch += 32;
-      }else if(ch >= 'a' && ch <= 'z'){
+      } else if(ch >= 'a' && ch <= 'z'){
         ch -= 32;
       }
       
       System.out.println(ch);
-      
-    
     
     }
   
@@ -233,8 +233,8 @@ public class MainWrapper {
 //    ex04();
 //    ex05();
 //    ex06();
-    ex07();
-//    ex08();
+//    ex07();
+    ex08();
     
   }
 
