@@ -242,8 +242,9 @@ public static void ex10() {
 //  ex05();
 //  ex06();
 //  ex07();
-  ex08();
+//  ex08();
 //  ex09();
+  ex10();
 
   }
 
