@@ -16,7 +16,7 @@ public class MainWrapper {
     /*
      *  배열의 선언 & 생성
      *  1. 배열의 선언
-     *    1) int[] 배열명  ㅊㅊ
+     *    1) int[] 배열명
      *    2) int 배열명[]
      *  
      *  2. 배열 생성
@@ -48,7 +48,7 @@ public class MainWrapper {
     int length = 5;
     
     // 배열의 선언 & 생성
-    int[] a = new int[5];
+    int[] a = new int[length];
     
     // 배열요소를 하나씩 순차적으로 for문으로 접근
     for(int i = 0; i < length; i++) {
@@ -64,7 +64,7 @@ public class MainWrapper {
     // 배열의 길이는 "배열명.length"로 알아낼 수 있다.
     // 인덱스 for문 변수는 i로 쓰는게 좋다.
     for(int i = 0; i < a.length; i++) {
-     System.out.println(a[i]); 
+     System.out.println(a[i]);
     }
     /*
      * 배열의 초기화 
@@ -102,8 +102,10 @@ public class MainWrapper {
   public static void ex07() {
     int[] a = {10, 20, 30};
     int[] b = a;                      // 배열 a의 참조값 b로 전달하면 a,b 는 동일한 메모리 공간 참조가능.
+    b[0] = 3;
     for(int i = 0; i < b.length; i++) {
-      System.out.println(b[i]);
+      System.out.println("b배열 값: " + b[i]);
+      System.out.println("a배열 값: " + a[i]);
     }
   }
   public static void ex08() {
@@ -134,7 +136,7 @@ public class MainWrapper {
   }
   
   public static void main(String[] args) {
-//    ex01();
+    ex01();
 //    ex02();
 //    ex03();
 //    ex04();
