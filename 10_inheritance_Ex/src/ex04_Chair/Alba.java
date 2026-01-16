@@ -17,6 +17,8 @@ public class Alba extends Student{
   public void setWork(String work) {
     this.work = work;
   }
+
+  @Override
   public void info() {
     super.info();
     System.out.println("일하는 곳: " + work);
