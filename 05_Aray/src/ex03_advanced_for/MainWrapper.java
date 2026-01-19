@@ -28,6 +28,7 @@ public class MainWrapper {
     for(int i = 0; i < a.length; i++) {
       a[i]++;
     }
+    System.out.println(Arrays.toString(a));
     }
   public static void ex03() {
    // 2차원 배열의 advanced-for문
@@ -47,7 +48,7 @@ public class MainWrapper {
   public static void main(String[] args) {
 //    ex01();
 //    ex02();
-//    ex03();
+    ex03();
   }
 
 }
