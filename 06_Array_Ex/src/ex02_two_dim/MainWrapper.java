@@ -20,7 +20,12 @@ public class MainWrapper {
       }
       System.out.println();
     }
-    
+
+    for (int[] dan : gugudan) {
+      for (int gugu : dan) {
+        System.out.print(String.format("%4d", gugu));
+      }
+    }
     
   }
   
@@ -105,8 +110,7 @@ public class MainWrapper {
       }
       System.out.println();
     }
-    
-    
+
     
   }
 
