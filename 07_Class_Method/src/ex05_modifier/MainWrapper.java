@@ -11,7 +11,6 @@ public class MainWrapper {
    System.out.println(u.getAge());
    u.inputId("김연아", 28);
    System.out.println(u.getId());
-  
-  }
 
+  }
 }
