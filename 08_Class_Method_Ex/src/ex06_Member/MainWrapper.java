@@ -18,12 +18,12 @@ public class MainWrapper {
     
     Member member = new Member();
     member.setName("이성경");
-    member.setContect(contact);
+    member.setContact(contact);
 
     
     // Member member 객체 정보확인 (getter 활용)
     System.out.println("이름: " + member.getName());
-    System.out.println("집전화: " + member.getContact().getHomeTel() + ", 폰번호: " + member.getContact().getMoblie());
+    System.out.println("집전화: " + member.getContact().getHomeTel() + ", 폰번호: " + member.getContact().getMobile());
     System.out.println("우편번호: " + member.getContact().getAddress().getPostCode());
     System.out.println("도로명 주소: " + member.getContact().getAddress().getRoadAddr() + ", 지번: " + member.getContact().getAddress().getJibunAddr());
     System.out.println("상세주소: " + member.getContact().getAddress().getDetailAddr());
