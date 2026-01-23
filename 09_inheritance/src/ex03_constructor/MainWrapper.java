@@ -20,13 +20,13 @@ public class MainWrapper {
 
     System.out.println(st.getName());   // 부모객체가 자동으로 먼저 만들어 진다.
     System.out.println(st.getSchool());
-    
-    
+
+
     Student st2 = new Student("가산대학교");
     System.out.println(st2.getName());
     System.out.println(st2.getSchool());
-    
-    
+
+
     Student st3 = new Student("수소문", "가산대학교");
     System.out.println(st3.getName());
     System.out.println(st3.getSchool());
