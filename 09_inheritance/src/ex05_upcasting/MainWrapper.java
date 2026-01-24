@@ -26,16 +26,16 @@ public class MainWrapper {
 //    System.out.println(s1.getSchool());
 //    s1.info();
     
-    Person p1 = new Student("김민지", "세종대학교");
-    Person p2 = new Alba("김유정", "인하대학교", "스타벅스");
+//    Person p1 = new Student("김민지", "세종대학교");
+//    Person p2 = new Alba("김유정", "인하대학교", "스타벅스");
     
 //    p1.study();     // 단점 슈퍼클래스 아니면 메소드 못불러옴
 //    p2.study();
 //    p2.working();
     
     
-//    Alba alba = new Alba("김유정", "인하대학교", "스타벅스");
-//    alba.info();
+    Alba alba = new Alba("김유정", "인하대학교", "스타벅스");
+    alba.info();
     
     
     
