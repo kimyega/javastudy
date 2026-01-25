@@ -147,13 +147,13 @@ public class MainWrapper {
        Random random = new Random();
        int computer = random.nextInt(3);
        System.out.print("당신은 " + answer + ", 컴퓨터는 " + rsp[computer] + ", 당신은 ");
-       if( && computer == 2) {
-         System.out.print("이겼습니다.");
-       }else if(answer.equals(rsp[2]) && computer == 0) {
-         System.out.print("졌습니다.");
-       }else if() {
-         
-       }
+//       if(computer ==  && computer == 2) {
+//         System.out.print("이겼습니다.");
+//       }else if(answer.equals(rsp[2]) && computer == 0) {
+//         System.out.print("졌습니다.");
+//       }else if() {
+//
+//       }
        
        
      }

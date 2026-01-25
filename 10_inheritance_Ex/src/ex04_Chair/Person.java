@@ -1,20 +1,20 @@
 package ex04_Chair;
 
-public class Person extends Chair{
+public class Person {
   private String name;
   private Student student;
-  
+
   public Person() {
-    
+
   }
   public Person(String name) {
     this.name = name;
   }
-  
+
   public Person(Student student) {
     this.student = student;
   }
-  
+
   public Student getStudent() {
     return student;
   }

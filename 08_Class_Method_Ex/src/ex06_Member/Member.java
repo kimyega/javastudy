@@ -6,7 +6,7 @@ public class Member {
   public void setName(String name) {
     this.name = name;
   }
-  public void setContect(Contact contact) {
+  public void setContact(Contact contact) {
     this.contact = contact;
   }
   public String getName() {

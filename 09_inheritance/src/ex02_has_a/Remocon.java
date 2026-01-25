@@ -1,5 +1,6 @@
 package ex02_has_a;
 
+
 public class Remocon {
   private int ch;
   private int vol;

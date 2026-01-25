@@ -27,7 +27,7 @@ public class User {
   public int getAge() {
     return age;
   }
-  public void inputId(String inputId,int age) {
+  public void inputId(String inputId, int age) {
     if(age < 30) {
        id = "MZ";
     }else {

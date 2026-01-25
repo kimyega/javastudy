@@ -10,6 +10,6 @@ public class MainWrapper {
     Chair chair2 = new Chair();
     chair2.setPerson(new Alba("배수지", "서울대학교", "롯데리아"));
     chair2.getPerson().info();
-  }
 
+  }
 }
