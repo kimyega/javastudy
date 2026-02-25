@@ -48,6 +48,7 @@ public class MainWrapper {
     // 배열 for문 적용하기
     for(String a : hobbies) {
       System.out.println(a);
+      System.out.println(a.length());
     }
     System.out.println();
     
