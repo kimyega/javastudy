@@ -34,6 +34,8 @@ public class Bus {
     seats.get(number - 1).setPerson(person);
     System.out.println(String.format("%-2d", number) + "번 좌석에 " + person + "님이 착석했습니다.");
   }
+
+
   public void getOff(int number) {
     if(number < 1 || number > LIMIT) {
       System.out.println("존재하지 않는 좌석 번호 입니다.");
@@ -46,6 +48,8 @@ public class Bus {
     System.out.println(String.format("%-2d", number) + "번 좌석에 " + seats.get(number - 1) + "님이 하차했습니다.");
     seats.get(number - 1).setPerson(null);
   }
+
+
   public void info() {
     int number = 1;
     System.out.println("\n== 좌석 현황 ==\n");
