@@ -6,7 +6,7 @@ public class MainWrapper {
     
     Bus bus = new Bus();
     
-    bus.getOn(1, new Person("박보영"));
+    bus.getOn(1, new Person("박보영"));    // int number = 1; Person person = new Person("박보영");
     bus.getOn(25, new Student("차범근"));
     bus.getOn(30, new Student("박태환"));    // 오류
     
