@@ -49,7 +49,6 @@ public class Bus {
     seats.get(number - 1).setPerson(null);
   }
 
-
   public void info() {
     int number = 1;
     System.out.println("\n== 좌석 현황 ==\n");
